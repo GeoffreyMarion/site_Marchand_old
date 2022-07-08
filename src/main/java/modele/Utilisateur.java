@@ -18,7 +18,7 @@ public class Utilisateur {
 
 	public Utilisateur(int id_utilisateur, String nom, String prenom, Date date_inscription, String email,
 			String mot_de_passe) {
-		super();
+
 		this.id_utilisateur = id_utilisateur;
 		this.nom = nom;
 		this.prenom = prenom;
