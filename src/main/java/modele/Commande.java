@@ -14,7 +14,7 @@ public class Commande {
 		
 	}
 	
-	public Commande(int id_commande, Utilisateur utilisateur, Date date, float total, Adresse adresse, int etat) {
+	public Commande(int id_commande, Utilisateur utilisateur, Date date, float total, Adresse_livraison adresse, int etat) {
 		super();
 		this.id_commande = id_commande;
 		this.utilisateur = utilisateur;
@@ -47,10 +47,10 @@ public class Commande {
 	public void setTotal(float total) {
 		this.total = total;
 	}
-	public Adresse getAdresse() {
+	public Adresse_livraison getAdresse_livraison() {
 		return adresse;
 	}
-	public void setAdresse(Adresse adresse) {
+	public void setAdresse_livraison(Adresse_livraison adresse) {
 		this.adresse = adresse;
 	}
 	public int getEtat() {
