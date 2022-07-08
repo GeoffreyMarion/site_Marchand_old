@@ -1,12 +1,12 @@
 package modele;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Utilisateur {
 	private int id_utilisateur;
 	private String nom;
 	private String prenom;
-	private Date date_inscription;
+	private LocalDate date_inscription;
 	private String email;
 	private String mot_de_passe;
 	
@@ -16,13 +16,14 @@ public class Utilisateur {
 	}
 
 
-	public Utilisateur(int id_utilisateur, String nom, String prenom, Date date_inscription, String email,
+	public Utilisateur(int id_utilisateur, String nom, String prenom, String email,
 			String mot_de_passe) {
 
+		LocalDate currentDate = LocalDate.now();
 		this.id_utilisateur = id_utilisateur;
 		this.nom = nom;
 		this.prenom = prenom;
-		this.date_inscription = date_inscription;
+		this.date_inscription = currentDate;
 		this.email = email;
 		this.mot_de_passe = mot_de_passe;
 	}
@@ -58,12 +59,12 @@ public class Utilisateur {
 	}
 
 
-	public Date getDate_inscription() {
+	public LocalDate getDate_inscription() {
 		return date_inscription;
 	}
 
 
-	public void setDate_inscription(Date date_inscription) {
+	public void setDate_inscription(LocalDate date_inscription) {
 		this.date_inscription = date_inscription;
 	}
 
