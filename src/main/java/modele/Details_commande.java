@@ -2,8 +2,8 @@ package modele;
 
 public class Details_commande {
 private int id_details_commande;
-private int id_commande;
-private int id_produit;
+private Commande commande;
+private Produit produit;
 private int quantite;
 private int prix;
 
@@ -11,10 +11,10 @@ public Details_commande() {
 
 }
 
-public Details_commande(int id_details_commande, int id_commande, int id_produit, int quantite, int prix) {
+public Details_commande(int id_details_commande, Commande commande, Produit produit, int quantite, int prix) {
 	this.id_details_commande = id_details_commande;
-	this.id_commande = id_commande;
-	this.id_produit = id_produit;
+	this.commande =commande;
+	this.produit = produit;
 	this.quantite = quantite;
 	this.prix = prix;
 }
@@ -27,20 +27,22 @@ public void setId_details_commande(int id_details_commande) {
 	this.id_details_commande = id_details_commande;
 }
 
-public int getId_commande() {
-	return id_commande;
+
+
+public Commande getCommande() {
+	return commande;
 }
 
-public void setId_commande(int id_commande) {
-	this.id_commande = id_commande;
+public void setCommande(Commande commande) {
+	this.commande = commande;
 }
 
-public int getId_produit() {
-	return id_produit;
+public Produit getProduit() {
+	return produit;
 }
 
-public void setId_produit(int id_produit) {
-	this.id_produit = id_produit;
+public void setProduit(Produit produit) {
+	this.produit = produit;
 }
 
 public int getQuantite() {
@@ -61,8 +63,7 @@ public void setPrix(int prix) {
 
 @Override
 public String toString() {
-	return "Details_commande [id_details_commande=" + id_details_commande + ", id_commande=" + id_commande
-			+ ", id_produit=" + id_produit + ", quantite=" + quantite + ", prix=" + prix + "]";
+	return "Details_commande [id_details_commande=" + id_details_commande + ", commande=" + commande + ", quantite="
+			+ quantite + ", prix=" + prix + "]";
 }
-
 }
