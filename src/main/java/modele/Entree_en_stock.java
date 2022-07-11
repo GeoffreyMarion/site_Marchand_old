@@ -39,8 +39,6 @@ public class Entree_en_stock {
 		this.fournisseur = fournisseur;
 	}
 
-	
-
 	public Date getDate_entree_en_stock() {
 		return date_entree_en_stock;
 	}
@@ -55,6 +53,14 @@ public class Entree_en_stock {
 
 	public void setQuantite(int quantite) {
 		this.quantite = quantite;
+	}
+
+	public Produit getProduit() {
+		return produit;
+	}
+
+	public void setProduit(Produit produit) {
+		this.produit = produit;
 	}
 
 	@Override
