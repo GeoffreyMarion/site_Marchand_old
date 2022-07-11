@@ -2,7 +2,6 @@ package modele;
 
 public class Contact {
 private int id_contact;
-private int id_utilisateur = 1;
 private String sujet;
 private String message;
 private int etat_contact;
@@ -10,6 +9,15 @@ private int etat_contact;
 public Contact() {
 
 }
+
+
+public Contact(String sujet, String message, int etat_contact) {
+	this.id_utilisateur = 1;
+	this.sujet = sujet;
+	this.message = message;
+	this.etat_contact = etat_contact;
+}
+
 public Contact(int id_contact, int id_utilisateur, String sujet, String message, int etat_contact) {
 	this.id_contact = id_contact;
 	this.id_utilisateur = id_utilisateur;
