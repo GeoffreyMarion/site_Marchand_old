@@ -1,6 +1,6 @@
 package modele;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 public class Visite {
 private int id_visite;
@@ -28,22 +28,6 @@ public int getId_visite() {
 
 public void setId_visite(int id_visite) {
 	this.id_visite = id_visite;
-}
-
-public int getId_produit() {
-	return id_produit;
-}
-
-public void setId_produit(int id_produit) {
-	this.id_produit = id_produit;
-}
-
-public int getId_utilisateur() {
-	return id_utilisateur;
-}
-
-public void setId_utilisateur(int id_utilisateur) {
-	this.id_utilisateur = id_utilisateur;
 }
 
 
@@ -79,7 +63,8 @@ public void setDate_visite(Date date_visite) {
 
 @Override
 public String toString() {
-	return "Visite [id_visite=" + id_visite + ", utilisateur=" + utilisateur + "]";
+	return "Visite [id_visite=" + id_visite + ", produit=" + produit + ", utilisateur=" + utilisateur + ", date_visite="
+			+ date_visite + "]";
 }
 
 }
