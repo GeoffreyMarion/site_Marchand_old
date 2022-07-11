@@ -39,6 +39,22 @@ public void setNote(int note) {
 	this.note = note;
 }
 
+public Produit getProduit() {
+	return produit;
+}
+
+public void setProduit(Produit produit) {
+	this.produit = produit;
+}
+
+public Utilisateur getUtilisateur() {
+	return utilisateur;
+}
+
+public void setUtilisateur(Utilisateur utilisateur) {
+	this.utilisateur = utilisateur;
+}
+
 @Override
 public String toString() {
 	return "Commentaire [id_commentaire=" + id_commentaire + ", commentaire=" + commentaire + ", note=" + note
