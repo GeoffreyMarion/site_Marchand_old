@@ -6,7 +6,7 @@ public class Produit {
 	private String description;
 	private float prix;
 	private String image;
-	private int id_sous_categorie;
+	private Sous_categorie sous_categorie;
 	private int stock;
 	private int stock_minimum;
 
@@ -14,17 +14,20 @@ public class Produit {
 
 	}
 
+
 	public Produit(int id_produit, String titre_produit, String description, float prix, String image,
-			int id_sous_categorie, int stock, int stock_minimum) {
+			Sous_categorie sous_categorie, int stock, int stock_minimum) {
+		super();
 		this.id_produit = id_produit;
 		this.titre_produit = titre_produit;
 		this.description = description;
 		this.prix = prix;
 		this.image = image;
-		this.id_sous_categorie = id_sous_categorie;
+		this.sous_categorie = sous_categorie;
 		this.stock = stock;
 		this.stock_minimum = stock_minimum;
 	}
+
 
 	public int getId_produit() {
 		return id_produit;
@@ -66,13 +69,17 @@ public class Produit {
 		this.image = image;
 	}
 
-	public int getId_sous_categorie() {
-		return id_sous_categorie;
+
+
+	public Sous_categorie getSous_categorie() {
+		return sous_categorie;
 	}
 
-	public void setId_sous_categorie(int id_sous_categorie) {
-		this.id_sous_categorie = id_sous_categorie;
+
+	public void setSous_categorie(Sous_categorie sous_categorie) {
+		this.sous_categorie = sous_categorie;
 	}
+
 
 	public int getStock() {
 		return stock;
@@ -90,11 +97,11 @@ public class Produit {
 		this.stock_minimum = stock_minimum;
 	}
 
+
 	@Override
 	public String toString() {
 		return "Produit [id_produit=" + id_produit + ", titre_produit=" + titre_produit + ", description=" + description
-				+ ", prix=" + prix + ", image=" + image + ", id_sous_categorie=" + id_sous_categorie + ", stock="
-				+ stock + ", stock_minimum=" + stock_minimum + "]";
+				+ ", prix=" + prix + ", image=" + image + ", stock=" + stock + ", stock_minimum=" + stock_minimum + "]";
 	}
 
 }

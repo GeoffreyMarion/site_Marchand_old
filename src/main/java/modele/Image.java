@@ -2,16 +2,18 @@ package modele;
 
 public class Image {
 	private int id_image;
-	private int id_produit;
+	private Produit produit;
 	private String url;
 
 	public Image() {
 
 	}
 
-	public Image(int id_image, int id_produit, String url) {
+
+	public Image(int id_image, Produit produit, String url) {
+		super();
 		this.id_image = id_image;
-		this.id_produit = id_produit;
+		this.produit = produit;
 		this.url = url;
 	}
 
@@ -23,13 +25,16 @@ public class Image {
 		this.id_image = id_image;
 	}
 
-	public int getId_produit() {
-		return id_produit;
+
+	public Produit getProduit() {
+		return produit;
 	}
 
-	public void setId_produit(int id_produit) {
-		this.id_produit = id_produit;
+
+	public void setProduit(Produit produit) {
+		this.produit = produit;
 	}
+
 
 	public String getUrl() {
 		return url;
@@ -39,8 +44,9 @@ public class Image {
 		this.url = url;
 	}
 
+
 	@Override
 	public String toString() {
-		return "Image [id_image=" + id_image + ", id_produit=" + id_produit + ", url=" + url + "]";
+		return "Image [id_image=" + id_image + ", produit=" + produit + ", url=" + url + "]";
 	}
 }
