@@ -5,21 +5,23 @@ import java.util.Date;
 public class Entree_en_stock {
 	private int id_entree_en_stock;
 	private Fournisseur fournisseur;
-	private int id_produit;
+	private Produit produit;
 	private Date date_entree_en_stock;
 	private int quantite;
 
 	public Entree_en_stock() {
 	}
 
-	public Entree_en_stock(int id_entree_en_stock, Fournisseur fournisseur, int id_produit, Date date_entree_en_stock,
+	public Entree_en_stock(int id_entree_en_stock, Fournisseur fournisseur, Produit produit, Date date_entree_en_stock,
 			int quantite) {
+		super();
 		this.id_entree_en_stock = id_entree_en_stock;
 		this.fournisseur = fournisseur;
-		this.id_produit = id_produit;
+		this.produit = produit;
 		this.date_entree_en_stock = date_entree_en_stock;
 		this.quantite = quantite;
 	}
+
 
 	public int getId_entree_en_stock() {
 		return id_entree_en_stock;
@@ -37,13 +39,7 @@ public class Entree_en_stock {
 		this.fournisseur = fournisseur;
 	}
 
-	public int getId_produit() {
-		return id_produit;
-	}
-
-	public void setId_produit(int id_produit) {
-		this.id_produit = id_produit;
-	}
+	
 
 	public Date getDate_entree_en_stock() {
 		return date_entree_en_stock;
@@ -64,8 +60,6 @@ public class Entree_en_stock {
 	@Override
 	public String toString() {
 		return "Entree_en_stock [id_entree_en_stock=" + id_entree_en_stock + ", fournisseur=" + fournisseur
-				+ ", id_produit=" + id_produit + ", date_entree_en_stock=" + date_entree_en_stock + ", quantite="
-				+ quantite + "]";
+				+ ", date_entree_en_stock=" + date_entree_en_stock + ", quantite=" + quantite + "]";
 	}
-
 }
